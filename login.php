@@ -1,3 +1,5 @@
+<?php ob_start(); ?>
+<?php session_start(); ?>
 <?php include "layouts/header.php"; ?>
 <style>
   h2{
@@ -21,26 +23,38 @@ color:white;
   </style>
 <?php
   include "config.php";
-  if($_POST)
+  if(isset($_POST['login']))
 	{
+	  
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		
 		$sql = "SELECT * FROM `register` where email = '".$email."' and password = '".$password."' ";
 		$query =  mysqli_query($conn, $sql);
-		if( $_POST)
+		$row = $query->fetch_array();
+		$count = $query->num_rows;
+	
+		if($count != 0)
 		{
-			$row = mysqli_fetch_assoc($query);
-			session_start();
+		    
+			
+	    
 			$_SESSION['name'] = $row['name'];
-      $_SESSION['id'] = $row['id'];
-			header('Location: order.php');
+            $_SESSION['id'] = $row['id'];
+// 			header("Location: order.php");
+            
+          
+           echo '<script>window.location.href = "order.php?id='.$row['id'].'"</script>';
+
+		
 		}
 		else
 		{
 			echo "<script> alert('Invalid Email or Password.'); </script>";
 		}
+			
 	}
+
 ?>
 
 <div class="container">
@@ -69,3 +83,4 @@ color:white;
 
 </body>
 </html>
+<?php ob_end_flush(); ?>

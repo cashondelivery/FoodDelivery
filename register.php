@@ -20,7 +20,7 @@ color:white;
 
 <div class="container">
 
-  <center><h2>Registration form</h2></center></br>
+  <center><h2>Customer Registration form</h2></center></br>
   <form class="form-horizontal" method="post" action="add_user.php">
     <div class="form-group">
       <label class="control-label col-sm-2 col-sm-offset-2" for="name">Name:</label>

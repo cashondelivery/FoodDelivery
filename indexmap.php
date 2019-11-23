@@ -2,10 +2,11 @@
 <?php include('header.php'); ?>
 <body>
 <?php include('navbarstaff.php'); ?>
+<?php $id=$_SESSION['id']; ?>
 
 
 	<h1 class="page-header text-center">Order Need to Deliver</h1>
-	<center><a href="listtakeorder.php ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> back</a></center>
+	<center><a href="listtakeorder.php?staffid=<?php echo $id; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> back</a></center>
                
 		<td><?php include('admin-map.php'); ?>
 								

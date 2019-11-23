@@ -15,18 +15,27 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
        
-<li><a href="map\admin-map.php">Staff Confirm</a></li>
+<li>
+          <a href="listtakeorder.php">Order History </a>
+          
+        </li>
+        <li>
+          <a href="listpay.php">Confirm Pay </a>
+          
+        </li>
          <li>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret" ></span></a>
           <ul class="dropdown-menu">
-             <li ><a href="indexstaff.php"><span class="glyphicon glyphicon-log-out" ;"></span>  Home</a></li>
-            <li ><a href="showstaff.php"><span class="glyphicon glyphicon-log-out" ;"></span>  Show Profile</a></li>
-            <li ><a href="updatestaff.php"><span class="glyphicon glyphicon-log-out" ;"></span>  Update Profile</a></li>
-            <li ><a href="loginstaff.php"><span class="glyphicon glyphicon-log-out" ;"></span>  Logout</a></li>
+           
+            <li ><a href="showstaff.php"><span  ;"></span>  Show Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li ><a href="updatestaff.php"><span  ;"></span>  Update Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li ><a href="loginstaff.php"><span  ;"></span>  Logout</a></li>
 
           </ul>
         </li>
-
+      
         
         
    

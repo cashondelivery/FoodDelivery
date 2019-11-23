@@ -5,7 +5,7 @@ include_once 'locations_model.php';
 ?>
 
 
-<div id="map"></div>
+<center><div id="map" style="height: 400px; width: 600px"></div></center>
 
 <!------ Include the above in your HEAD tag ---------->
 <script>
@@ -83,7 +83,7 @@ include_once 'locations_model.php';
 </script>
 
 <div style="display: none" id="form">
-    <table class="" style="height: 400px; width: 600px>
+    <table class="map" style="height: 400px; width: 600px>
         <tr>
             <input name="id" type='hidden' id='id'/>
             <td><a>Description:</a></td>
@@ -101,5 +101,4 @@ include_once 'locations_model.php';
         src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyCbpa08Ewq2NjT2nr9bRyBj5ncvPcL9CBk&callback=initMap">
 </script>
 
-<center><a href="salescust.php ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> back</a></center>
                   

@@ -38,15 +38,19 @@ if (!file_exists($tempdir))
                                             $line="---------------------------------------";
                                             $name=" NAME         :";
                                             $desc =" DESCRIPTION  :";
-                                            $a  =" PRODUCT NAME :";
-                                            $b  =" PRICE PER QUANTITY       : RM";
-                                            $c  =" QUALITY      :";
+                                            $pname  =" PRODUCT NAME :";
+                                            $pricee  =" PRICE PER QUANTITY       : RM";
+                                            $qntity  =" QUALITY      :";
 
 
                                             $tot=$tot+($price*$quantity);
                                             
 
-                                            $qr = $qr.$header."\n "."\n ".$line."\n ".$name." ".$custname."\n "."\n ". $a." ".$pn."\n "."\n ".$desc." ".$des."\n "."\n ".$b." ".$price."\n "."\n ".$c." ".$quantity."\n "."\n ".$line."\n "."\n";
+                                            $qr =$qr.$pname." ".$pn."\n "."\n "
+                                            .$desc." ".$des."\n "."\n "
+                                            .$pricee." ".$price."\n "."\n "
+                                            .$qntity." ".$quantity."\n "."\n "
+                                            .$line."\n "."\n";
 
 
 
@@ -59,7 +63,7 @@ if (!file_exists($tempdir))
                                     <?php
                                     
                                 }
-                                            $new=$qr."TOTAL :RM".$tot."\n"."\n"."\n".$footer;
+                                            $new=$header."\n "."\n ".$name." ".$custname."\n "."\n ".$line."\n".$qr."TOTAL :RM".$tot."\n"."\n"."\n".$footer;
                                             $namafile1 = $custname.".png";
                                             //Kualitas dari QRCode 
                                             $quality1 = 'H'; 

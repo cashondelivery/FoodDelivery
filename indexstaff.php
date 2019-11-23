@@ -7,12 +7,13 @@
 	<h1 class="page-header text-center">Order Need to Deliver</h1>
 	<table class="table table-striped table-bordered">
 		<thead>
-			<th>a</th>
-			<th>b</th>
+		
 			<th>Latitude</th>
 			<th>Longitude</th>
 			<th>Address</th>
 			<th>Take Order</th>
+			<th>Order Customer</th>
+			
 		</thead>
 		<tbody>
 			<?php 
@@ -20,24 +21,42 @@
 				
 				$query=$conn->query($sql);
 				while($row=$query->fetch_assoc()){
+					$id=$row['id'];
+					$custid=$row['custid'];
 					?>
-					<tr>
-						 
-      					<td><?php echo $_SESSION['id']; ?></td>
-						<td><?php echo $_SESSION['name']; ?></td>
+					<tr >
+
 						<td><?php echo $row['lat']; ?></td>
 						<td><?php echo $row['lng']; ?></td>
 						<td><?php echo $row['description']; ?></td>
-						<td><a href="indexmap.php ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Take</a></td>
 						
-						
+						<td width="200px"><a href="indexmap.php?id=<?php echo $id; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Take</a>	
+
+
+					<?php 
+				$sql2="select * 
+				from purchase 
+				where id=$custid";
+				
+				$query=$conn->query($sql);
+				while($row=$query->fetch_assoc()){
+					?>
+					
+			
+					<?php
+				}
+			?>
+					<td width="200px"> <a href="#detailsstaff<?php echo $row['custid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> View Sales Details</a>
+
+<?php include('sales_staff.php'); ?>	
 						
 					</tr>
-
 
 					<?php
 				}
 			?>
+	
+
 		</tbody>
 			
 					<tr>

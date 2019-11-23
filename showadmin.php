@@ -75,7 +75,7 @@
 				<?php
 
 					$id=$_SESSION['id'];
-					$sql="select * from register where id=$id";
+					$sql="select * from registeradmin where id=$id";
 					$query=$conn->query($sql);
 					while($row=$query->fetch_array()){
 						?>

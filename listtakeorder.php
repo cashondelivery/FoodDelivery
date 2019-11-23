@@ -4,7 +4,7 @@
 <?php include('navbarstaff.php'); ?>
 <div class="container">
 
-	<h1 class="page-header text-center">Order That You Take</h1>
+	<h1 class="page-header text-center">Order That You Just Take</h1>
 	<table class="table table-striped table-bordered">
 		<thead>
 			
@@ -13,11 +13,16 @@
 			<th>Latitude</th>
 			<th>Longitude</th>
 			<th>Address</th>
-			
+			<th>Order</th>
 		</thead>
 		<tbody>
 			<?php 
-				$sql="select * from locations order by modified_on desc limit 1";
+				$sql="select * 
+				from locations as l
+				join register as r
+				on l.custid=r.id
+				order by l.modified_on desc 
+				limit 1";
 				
 				$query=$conn->query($sql);
 				while($row=$query->fetch_assoc()){
@@ -25,7 +30,69 @@
 					<tr>
 						 
       					<td><?php echo $row['modified_on']; ?></td>
-						<td><?php echo $_SESSION['name']; ?></td>
+						<td><?php echo $row['name']; ?></td>
+						<td><?php echo $row['lat']; ?></td>
+						<td><?php echo $row['lng']; ?></td>
+						<td><?php echo $row['description']; ?></td>
+						
+						
+						
+						
+					</tr>
+
+
+					<?php
+				}
+			?>
+		</tbody>
+			
+					<tr>
+						
+
+						
+					</tr>
+					
+<tr>
+						
+						
+					</tr>
+
+					<?php
+				
+			?>
+		
+	</table>
+</div>
+<div class="container">
+
+	<h1 class="page-header text-center">Order History</h1>
+	<table class="table table-striped table-bordered">
+		<thead>
+			
+			<th>Time</th>
+			<th>Customer Name</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
+			<th>Address</th>
+			<th>Order</th>
+		</thead>
+		<tbody>
+			<?php 
+			$id=$_SESSION['id'];
+				$sql="select * 
+				from locations as l
+				join register as r
+				on l.custid=r.id
+				where staffid=$id
+				order by l.modified_on desc ";
+				
+				$query=$conn->query($sql);
+				while($row=$query->fetch_assoc()){
+					?>
+					<tr>
+						 
+      					<td><?php echo $row['modified_on']; ?></td>
+						<td><?php echo $row['name']; ?></td>
 						<td><?php echo $row['lat']; ?></td>
 						<td><?php echo $row['lng']; ?></td>
 						<td><?php echo $row['description']; ?></td>

@@ -12,7 +12,7 @@
 				<th>ID</th>
 				<th>Name</th>
 				<th>Email</th>
-				<th>Password</th>
+				
 				<th>Number</th>
 				<th>Address</th>
 				<th>Action</th>
@@ -31,7 +31,7 @@
 							<td><?php echo $row['id']; ?></td>
 							<td><?php echo $row['name']; ?></td>
 							<td><?php echo $row['email']; ?></td>
-							<td><?php echo $row['password']; ?></td>
+							
 							<td><?php echo $row['number']; ?></td>
 							<td><?php echo $row['address']; ?></td>
 							

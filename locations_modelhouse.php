@@ -76,8 +76,10 @@ function get_confirmed_locations(){
     }
     // update location with location_status if admin location_status.
     $sqldata = mysqli_query($con,"
-select id ,lat,lng,description,location_status as isconfirmed
-from locations WHERE  location_status = 1
+select id ,lat,lng,description,location_status 
+as isconfirmed
+from locations 
+WHERE  location_status = 1 
   ");
 
     $rows = array();
@@ -101,15 +103,13 @@ function get_all_locations(){
         die('Not connected : ' . mysqli_connect_error());
     }
     // update location with location_status if admin location_status.
-
-    $sqldata = "
+    $sqldata = mysqli_query($con,"
 select id ,lat,lng,description,location_status as isconfirmed
-from locations 
-  ";
+from locations
+  ");
 
-$query=mysqli_query($con,$sqldata);
     $rows = array();
-    while($r = mysqli_fetch_assoc($query)) {
+    while($r = mysqli_fetch_assoc($sqldata)) {
         $rows[] = $r;
 
     }

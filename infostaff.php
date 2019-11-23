@@ -6,10 +6,10 @@
 	<table class="table table-striped table-bordered">
 		<thead>
 			<th>Date</th>
-			<th>Customer Name</th>
-			<th>Customer Email</th>
-			<th>Customer Number</th>
-			<th>Customer Address</th>
+			<th>Staff Name</th>
+			<th>Staff Email</th>
+			<th>Staff Number</th>
+			<th>Staff Address</th>
 		</thead>
 		<tbody>
 			<?php 

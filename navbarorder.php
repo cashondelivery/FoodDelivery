@@ -30,8 +30,7 @@
           <a href="salescust.php"  role="button" aria-haspopup="true" aria-expanded="false">My Order </a>
          
         </li>
-              </ul>
-               <li ><a href="login.php"><span class="glyphicon glyphicon-log-out" ;"></span>  Logout</a></li>
+              
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
