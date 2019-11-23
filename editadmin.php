@@ -1,6 +1,6 @@
 <!-- <?php session_start(); ?> -->
 <?php
-	include('conn.php');
+	include('config.php');
 
 	$id=$_SESSION['id'];
 	$name=$_POST['name'];

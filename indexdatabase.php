@@ -2,7 +2,7 @@
 <?php
 //library phpqrcode
 include "phpqrcode/qrlib.php";
-include 'koneksi.php';
+include 'config.php';
  
 //direktory tempat menyimpan hasil generate qrcode jika folder belum dibuat maka secara otomatis akan membuat terlebih dahulu
 $tempdir = "temp/"; 
@@ -19,7 +19,7 @@ if (!file_exists($tempdir))
                         <tbody>
                             <?php
                                 $sql="select * from purchase_detail left join product on product.productid=purchase_detail.productid where purchaseid='".$row['purchaseid']."'";
-                                $dquery=$db1->query($sql);
+                                $dquery=$conn->query($sql);
                                 $qr="";
                                 $tot='0';
                                 while($row=$dquery->fetch_array()){

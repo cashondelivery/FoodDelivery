@@ -1,5 +1,5 @@
 <?php
-	include('conn.php');
+	include('config.php');
 
 	$pname=$_POST['pname'];
 	$price=$_POST['price'];

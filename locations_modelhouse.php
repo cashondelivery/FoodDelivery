@@ -1,6 +1,6 @@
 
 <?php
-require("db.php");
+require("config.php");
 
 // Gets data from URL parameters.
 if(isset($_GET['add_location'])) 

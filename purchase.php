@@ -2,7 +2,7 @@
 			session_start();
 ?>
 <?php
-	include('conn.php');
+	include('config.php');
 	if(isset($_POST['productid'])){
  
 		$customer=$_SESSION["name"];
@@ -36,7 +36,7 @@
  		
  		$sql="update purchase set total='$total' where purchaseid='$pid'";
  		$conn->query($sql);
-		header('location:user-map.php');		
+		header('location:indexmapstaff.php');		
 	}
 	else{
 		?>

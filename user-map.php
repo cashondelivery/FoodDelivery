@@ -192,8 +192,6 @@ include 'locations_model.php';
 
 
     </script>
-
-<center><a href="salescust.php ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Confirm</a></center>
                             
 
 

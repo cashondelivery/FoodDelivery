@@ -1,6 +1,6 @@
 
 <?php
-require("db.php");
+require("config.php");
 
 // Gets data from URL parameters.
 if(isset($_GET['add_location'])) 
@@ -104,7 +104,7 @@ function get_all_locations(){
 
     $sqldata = "
 select id ,lat,lng,description,location_status as isconfirmed
-from locations 
+from locations where location_status=0
   ";
 
 $query=mysqli_query($con,$sqldata);

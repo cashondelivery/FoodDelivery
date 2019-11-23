@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+	<?php session_start(); ?>
 <?php include('header.php'); ?>
 <body>
 <?php include('navbarstaff.php'); ?>
@@ -33,19 +33,6 @@
 						<td width="200px"><a href="indexmap.php?id=<?php echo $id; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Take</a>	
 
 
-					<?php 
-				$sql2="select * 
-				from purchase 
-				where id=$custid";
-				
-				$query=$conn->query($sql);
-				while($row=$query->fetch_assoc()){
-					?>
-					
-			
-					<?php
-				}
-			?>
 					<td width="200px"> <a href="#detailsstaff<?php echo $row['custid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> View Sales Details</a>
 
 <?php include('sales_staff.php'); ?>	
