@@ -7,6 +7,7 @@ include 'locations_model.php';
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyCbpa08Ewq2NjT2nr9bRyBj5ncvPcL9CBk&callback=initMap">
     </script>
+    <script type="text/javascript" src="js/googlemap.js"></script>
 
     <center><div id="map" style="height: 400px; width: 600px" ></div></center>
     <script>

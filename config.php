@@ -6,4 +6,5 @@ $dbPassword ='';
 $dbDatabase ='foodsys';
 $conn=mysqli_connect($dbHost,$dbUsername,$dbPassword,$dbDatabase);
 
+
 ?>
